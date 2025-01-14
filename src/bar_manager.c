@@ -955,7 +955,7 @@ void bar_manager_handle_space_change(struct bar_manager* bar_manager, bool force
     bar_manager->bars[i]->sid = mission_control_index(dsid);
 
     bool was_shown = bar_manager->bars[i]->shown;
-    bar_manager->bars[i]->shown = SLSSpaceGetType(g_connection, dsid) != 4;
+    //bar_manager->bars[i]->shown = SLSSpaceGetType(g_connection, dsid) != 4;
 
     bar_manager->needs_ordering |= !was_shown && bar_manager->bars[i]->shown;
     force_refresh |= !was_shown && bar_manager->bars[i]->shown;
